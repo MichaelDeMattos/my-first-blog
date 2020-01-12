@@ -7,3 +7,8 @@ from django.shortcuts import render
 def post_list(request):
     return render(request, 'blog/post_list.html',
                   {})
+
+
+def sobre_dev(request):
+    return render(request, 'blog/sobre.html',
+                  {})
