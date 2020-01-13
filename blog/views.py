@@ -7,7 +7,7 @@ from django.utils import timezone
 
 # cria uma função que vai fazer uma requisição e renderizar nossa pagina main
 def post_list(request):
-    posts = Post.objects.filter(published_date__lte=timezone.now())
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by()
     return render(request, 'blog/post_list.html',
                   {'posts': posts})
 
