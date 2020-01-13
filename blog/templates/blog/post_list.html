@@ -7,37 +7,18 @@
 </head>
 
 <body>
-    <br>
-    <center>
-    <div>
-        <h1><a href="/"> Meu blog Dajngo</a></h1>
-    </div>
-    </center>
+        <center>
+             <h1><strong>Meu Blog Django</strong></h1>
+        </center>
 
-    <div>
-        <p> <strong> Publicado em 12/01/2020 as 16:07 </strong></p>
-        <h2><a href="/"> O que é Lorem Ipsum? </a></h2>
-        <p> Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos,<br>
-            e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja<br>
-            de tipos e os embaralhou para fazer um livro de modelos de tipos.</p>
-    </div>
 
-    <div>
-        <p><strong>Publicado em 12/01/2020 as 16:12</strong></p>
-        <h2><a href="/"> Porque nós o usamos? </a></h2>
-        <p>
-            É um fato conhecido de todos que um leitor se distrairá com o conteúdo de texto legível de uma<br>
-            página quando estiver examinando sua diagramação.
-        </p>
-    </div>
+        {% for post in posts %}
+        <div>
+            <p>Publicado em: {{ post.create_date }}</p>
+            <h2><a href=""> {{ post.title }}</a> </h2>
+            <p> {{ post.text|linebreaksbr }}</p>
+        </div>
+        {% endfor %}
 
-    <div>
-        <p><strong>Publicado em 12/01/2020 as 16:15</strong></p>
-        <h2><a href="/">De onde ele vem?</a></h2>
-        <p>
-            Ao contrário do que se acredita, Lorem Ipsum não é simplesmente um texto randômico. Com mais de 2000<br>
-            anos, suas raízes podem ser encontradas em uma obra de literatura latina clássica datada de 45 AC.
-        </p>
-    </div>
 </body>
 </html>
